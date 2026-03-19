@@ -3,1024 +3,1013 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GDCA - Gurjeet Daliwal Cricket Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>GDCA - Gurjeet Daliwal Cricket Academy | Sector 9, Panchkula</title>
+<meta name="description" content="GDCA – Gurjeet Daliwal Cricket Academy in Sector 9, Panchkula. Professional cricket coaching by Head Coach Gurjeet Daliwal and Assistant Coach Rajiv Yadav. Morning, Evening & Weekend batches. Enroll now!">
+<meta name="keywords" content="cricket academy panchkula, GDCA, Gurjeet Daliwal Cricket Academy, cricket coaching panchkula, cricket training sector 9 panchkula, best cricket academy haryana, Gurjeet Daliwal coach, Rajiv Yadav cricket">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GDCA – Gurjeet Daliwal Cricket Academy, Panchkula">
+<meta property="og:description" content="Professional cricket coaching in Sector 9, Panchkula. Enroll now!">
+<meta name="geo.region" content="IN-HR">
+<meta name="geo.placename" content="Panchkula, Haryana, India">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsOrganization","name":"GDCA – Gurjeet Daliwal Cricket Academy","sport":"Cricket","address":{"@type":"PostalAddress","streetAddress":"Sector 9","addressLocality":"Panchkula","addressRegion":"Haryana","postalCode":"134109","addressCountry":"IN"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--forest:#0d3b1e;--green:#1a5c2e;--green2:#2d8c4e;--pale:#e6f4ec;--gold:#c8922a;--gold2:#e8b84b;--gold3:#fdf3dc;--cream:#faf8f3;--dark:#0a1a0f;--text:#1c2e22;--gray:#607068;--lgray:#e8ede9;--white:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 
-  :root {
-    --green: #1a5c2e;
-    --green-light: #2d8c4e;
-    --green-pale: #e8f5ed;
-    --gold: #c8962a;
-    --gold-light: #f0c050;
-    --cream: #faf8f2;
-    --dark: #111a14;
-    --gray: #6b7280;
-    --gray-light: #f3f4f6;
-    --white: #ffffff;
-    --shadow: 0 4px 24px rgba(0,0,0,0.08);
-    --radius: 14px;
-  }
+/* NAV */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,59,30,0.97);backdrop-filter:blur(12px);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;box-shadow:0 2px 20px rgba(0,0,0,0.25)}
+.nb-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nb-logo{width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--forest);border:2px solid var(--gold2);flex-shrink:0}
+.nb-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:#fff;line-height:1}
+.nb-sub{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:.4px}
+.nb-links{display:flex;gap:2px;align-items:center}
+.nb-link{padding:6px 11px;border:none;background:transparent;color:rgba(255,255,255,0.7);font-family:'Outfit',sans-serif;font-size:12.5px;cursor:pointer;border-radius:7px;transition:all .2s}
+.nb-link:hover{background:rgba(255,255,255,0.1);color:#fff}
+.nb-link.active{background:var(--gold);color:var(--forest);font-weight:600}
+.nb-enroll{padding:7px 16px;background:var(--gold);color:var(--forest);border:none;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;margin-left:6px}
+.nb-enroll:hover{background:var(--gold2)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:#fff;border-radius:2px;display:block}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--forest);z-index:999;padding:1rem;flex-direction:column;gap:3px;box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.mob-menu.open{display:flex}
+.mob-link{padding:11px 16px;border:none;background:transparent;color:rgba(255,255,255,0.8);font-family:'Outfit',sans-serif;font-size:14px;cursor:pointer;border-radius:8px;text-align:left;transition:all .2s}
+.mob-link:hover,.mob-link.active{background:rgba(255,255,255,0.1);color:#fff}
+.mob-link.active{background:var(--gold);color:var(--forest);font-weight:600}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--dark);
-    min-height: 100vh;
-  }
+.page{display:none;padding-top:64px}
+.page.active{display:block}
 
-  /* NAV */
-  nav {
-    background: var(--green);
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 64px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  }
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .nav-logo {
-    width: 40px;
-    height: 40px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-weight: 900;
-    color: var(--green);
-    flex-shrink: 0;
-  }
-  .nav-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--white);
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  .nav-sub {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 300;
-  }
-  .nav-tabs {
-    display: flex;
-    gap: 4px;
-  }
-  .nav-tab {
-    padding: 6px 14px;
-    border: none;
-    background: transparent;
-    color: rgba(255,255,255,0.7);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.2s;
-    font-weight: 400;
-  }
-  .nav-tab.active, .nav-tab:hover {
-    background: rgba(255,255,255,0.12);
-    color: var(--white);
-  }
-  .nav-tab.active {
-    background: var(--gold);
-    color: var(--green);
-    font-weight: 600;
-  }
+/* HERO */
+.hero{min-height:100vh;background:var(--forest);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 1.5rem 4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(45,140,78,0.2) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 80%,rgba(200,146,42,0.12) 0%,transparent 60%)}
+.hero-pat{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 1px,transparent 40px)}
+.hero-c{position:relative;z-index:1;max-width:800px}
+.hero-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(200,146,42,0.15);border:1px solid rgba(200,146,42,0.4);color:var(--gold2);font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:5px 16px;border-radius:30px;margin-bottom:1.5rem;animation:fu .8s ease both}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,9vw,5.2rem);font-weight:700;color:#fff;line-height:1.05;margin-bottom:.75rem;animation:fu .8s .1s ease both}
+.hero h1 span{color:var(--gold2)}
+.hero-sub{font-size:clamp(13px,2.5vw,16px);color:rgba(255,255,255,0.6);margin-bottom:2.5rem;line-height:1.7;animation:fu .8s .2s ease both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fu .8s .3s ease both}
+.btn-p{padding:12px 28px;background:var(--gold);color:var(--forest);border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-p:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-o{padding:12px 28px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);border-radius:10px;font-family:'Outfit',sans-serif;font-size:14px;cursor:pointer;transition:all .2s}
+.btn-o:hover{background:rgba(255,255,255,0.08)}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.1);animation:fu .8s .4s ease both}
+.hst{text-align:center}
+.hst-n{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--gold2);display:block;line-height:1}
+.hst-l{font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
 
-  /* PAGES */
-  .page { display: none; }
-  .page.active { display: block; }
+/* STRIP */
+.strip{background:var(--gold);padding:1rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.strip-i{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--forest)}
+.s-dot{width:5px;height:5px;border-radius:50%;background:var(--forest);flex-shrink:0}
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, var(--green) 0%, #0f3d1c 100%);
-    padding: 3rem 1.5rem 4rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -40px;
-    width: 220px; height: 220px;
-    border-radius: 50%;
-    background: rgba(200,150,42,0.12);
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: -60px;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: rgba(200,150,42,0.08);
-  }
-  .hero-badge {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--green);
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
-    color: var(--white);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-  .hero-tagline {
-    font-size: 15px;
-    color: rgba(255,255,255,0.7);
-    font-weight: 300;
-    margin-bottom: 2rem;
-  }
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .hero-stat { text-align: center; }
-  .hero-stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--gold-light);
-    font-weight: 700;
-    display: block;
-  }
-  .hero-stat-label {
-    font-size: 12px;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+/* SECTION */
+.sec{padding:4.5rem 1.5rem}
+.si{max-width:1100px;margin:0 auto}
+.sl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green2);font-weight:600;margin-bottom:.6rem}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--forest);line-height:1.15;margin-bottom:.75rem}
+.sd{font-size:14px;color:var(--gray);line-height:1.7;max-width:540px}
+.sh{margin-bottom:2.5rem}
 
-  /* CARDS */
-  .section { padding: 2rem 1.5rem; }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: var(--green);
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  .section-subtitle {
-    font-size: 13px;
-    color: var(--gray);
-    margin-bottom: 1.5rem;
-  }
+/* ── COACH CARDS with PHOTO ── */
+.coaches-g{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.cc{background:var(--white);border-radius:22px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08);transition:transform .3s,box-shadow .3s}
+.cc:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.13)}
+.cc-photo{height:240px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.cc-photo.gd-bg{background:linear-gradient(160deg,#0a2e14 0%,#1a5c2e 45%,#0f4020 100%)}
+.cc-photo.ry-bg{background:linear-gradient(160deg,#0d2a1a 0%,#1e4d30 45%,#0a3020 100%)}
+/* Cricket ground texture lines */
+.cc-photo::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.03) 0,rgba(255,255,255,0.03) 1px,transparent 1px,transparent 60px);pointer-events:none}
+.cc-svg-wrap{position:absolute;bottom:0;width:100%;display:flex;justify-content:center}
+.cc-gold-band{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),var(--gold),transparent)}
+.cc-name-overlay{position:absolute;top:16px;left:16px;right:16px}
+.cc-role-pill{display:inline-block;background:var(--gold);color:var(--forest);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:6px}
+.cc-name-big{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5)}
+.cc-body{padding:1.5rem}
+.cc-bio{font-size:13.5px;color:var(--gray);line-height:1.75;margin-bottom:1.1rem}
+.cc-sts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:1.1rem}
+.cst{background:var(--pale);border-radius:10px;padding:.65rem;text-align:center}
+.cst-n{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--green);display:block}
+.cst-l{font-size:10px;color:var(--gray);font-weight:500}
+.cc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11.5px;padding:3px 11px;border-radius:20px;background:var(--lgray);color:var(--text);font-weight:500}
 
-  .card {
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-  .card-pad { padding: 1.25rem; }
+/* RATINGS */
+.rat-sec{background:var(--forest)}
+.rat-sec .st,.rat-sec .sl{color:var(--gold2)}
+.rat-sec .st{color:#fff}
+.rat-sec .sd{color:rgba(255,255,255,0.55)}
+.rat-g{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.rc{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:1.75rem}
+.rc-hd{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.rc-av{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;flex-shrink:0}
+.rc-nm{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px}
+.rc-rl{font-size:11px;color:rgba(255,255,255,0.45)}
+.rc-ov{display:flex;align-items:baseline;gap:8px;margin-bottom:1.25rem}
+.rc-sc{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--gold2);line-height:1}
+.stars{display:flex;gap:3px}
+.star{width:14px;height:14px;background:var(--gold2);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.star.e{background:rgba(255,255,255,0.2)}
+.star.h{background:linear-gradient(90deg,var(--gold2) 50%,rgba(255,255,255,0.2) 50%)}
+.rc-out{font-size:12px;color:rgba(255,255,255,0.35)}
+.rb{margin-bottom:.8rem}
+.rb-tp{display:flex;justify-content:space-between;margin-bottom:4px}
+.rb-l{font-size:12px;color:rgba(255,255,255,0.6)}
+.rb-v{font-size:12px;font-weight:600;color:var(--gold2)}
+.rb-tr{height:5px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden}
+.rb-f{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:3px}
 
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+/* BATCHES */
+.bat-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.bc{background:var(--white);border-radius:20px;padding:1.75rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-top:4px solid var(--green);transition:transform .3s,box-shadow .3s;position:relative}
+.bc:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1)}
+.bc.feat{border-top-color:var(--gold)}
+.bc-icon{width:46px;height:46px;border-radius:12px;background:var(--pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:1rem}
+.bc-nm{font-size:17px;font-weight:600;color:var(--forest);margin-bottom:.35rem}
+.bc-tm{font-size:13px;color:var(--green2);font-weight:500;margin-bottom:.4rem}
+.bc-dy{font-size:12px;color:var(--gray);margin-bottom:1rem}
+.bc-fe{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--forest)}
+.bc-fe span{font-size:12px;font-weight:400;color:var(--gray);font-family:'Outfit',sans-serif}
+.bc-bg{position:absolute;top:1.1rem;right:1.1rem;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.bbo{background:var(--pale);color:var(--green)}
+.bbl{background:var(--gold3);color:#7a5500}
 
-  /* COACHES */
-  .coach-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-    text-align: center;
-  }
-  .coach-avatar {
-    width: 72px; height: 72px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  .coach-avatar.head {
-    background: var(--green);
-    color: var(--gold);
-    border: 3px solid var(--gold);
-  }
-  .coach-avatar.asst {
-    background: var(--gold-light);
-    color: var(--green);
-    border: 3px solid var(--green-light);
-  }
-  .coach-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 0.25rem;
-  }
-  .coach-role {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 3px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 0.75rem;
-  }
-  .coach-role.head { background: var(--green-pale); color: var(--green); }
-  .coach-role.asst { background: #fef9e7; color: #8a6a00; }
-  .coach-info { font-size: 13px; color: var(--gray); line-height: 1.6; }
+/* WHY */
+.why-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.wc{background:var(--white);border-radius:16px;padding:1.5rem;box-shadow:0 2px 16px rgba(0,0,0,0.05);text-align:center}
+.wc-i{width:50px;height:50px;border-radius:12px;background:var(--pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto .85rem}
+.wc-t{font-size:14px;font-weight:600;color:var(--forest);margin-bottom:.4rem}
+.wc-d{font-size:12.5px;color:var(--gray);line-height:1.6}
 
-  /* BATCHES */
-  .batch-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 1.25rem;
-    border-left: 4px solid var(--green);
-  }
-  .batch-name {
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--dark);
-    margin-bottom: 0.25rem;
-  }
-  .batch-time {
-    font-size: 13px;
-    color: var(--gray);
-    margin-bottom: 0.75rem;
-  }
-  .badge {
-    display: inline-block;
-    font-size: 11px;
-    padding: 2px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  .badge-green { background: var(--green-pale); color: var(--green); }
-  .badge-gold { background: #fef9e7; color: #8a6a00; }
+/* ── REVIEWS with PHOTO AVATARS ── */
+.rev-sec{background:var(--pale)}
+.rev-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.rv{background:var(--white);border-radius:16px;padding:1.5rem;box-shadow:0 2px 16px rgba(0,0,0,0.05);position:relative}
+.rv-stars{display:flex;gap:2px;margin-bottom:.75rem}
+.rv-star{width:14px;height:14px;background:var(--gold2);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.rv-txt{font-size:13.5px;color:var(--text);line-height:1.75;margin-bottom:1.1rem;font-style:italic;position:relative;padding-left:1.1rem}
+.rv-txt::before{content:'"';position:absolute;left:0;top:-4px;font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold2);line-height:1}
+.rv-ft{display:flex;align-items:center;gap:10px;padding-top:.85rem;border-top:1px solid var(--lgray)}
+.rv-av{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--lgray)}
+.rv-av svg{width:44px;height:44px}
+.rv-nm{font-size:13.5px;font-weight:600;color:var(--forest)}
+.rv-mt{font-size:11px;color:var(--gray)}
+.rv-verified{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--green2);font-weight:600;margin-top:2px}
 
-  /* FORM */
-  .form-group { margin-bottom: 1rem; }
-  .form-label {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--dark);
-    margin-bottom: 6px;
-  }
-  .form-input, .form-select, .form-textarea {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1.5px solid #e5e7eb;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--dark);
-    background: var(--white);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .form-input:focus, .form-select:focus, .form-textarea:focus {
-    border-color: var(--green-light);
-    box-shadow: 0 0 0 3px rgba(45,140,78,0.08);
-  }
-  .form-textarea { resize: vertical; min-height: 80px; }
-  .btn {
-    width: 100%;
-    padding: 12px;
-    background: var(--green);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-  }
-  .btn:hover { background: var(--green-light); }
-  .btn:active { transform: scale(0.98); }
-  .btn-gold {
-    background: var(--gold);
-    color: var(--green);
-  }
-  .btn-gold:hover { background: var(--gold-light); }
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--forest) 0%,var(--green) 100%);padding:4.5rem 1.5rem;text-align:center}
 
-  /* STUDENTS TABLE */
-  .student-list { }
-  .student-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 0;
-    border-bottom: 1px solid #f3f4f6;
-  }
-  .student-item:last-child { border-bottom: none; }
-  .student-avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    background: var(--green-pale);
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-  .student-name { font-weight: 500; font-size: 14px; color: var(--dark); }
-  .student-meta { font-size: 12px; color: var(--gray); }
-  .student-actions { margin-left: auto; display: flex; gap: 6px; }
-  .btn-small {
-    padding: 4px 12px;
-    border: 1.5px solid #e5e7eb;
-    border-radius: 8px;
-    background: transparent;
-    font-size: 12px;
-    cursor: pointer;
-    color: var(--gray);
-    font-family: 'DM Sans', sans-serif;
-    transition: all 0.15s;
-  }
-  .btn-small:hover { border-color: var(--green); color: var(--green); }
-  .btn-small.danger:hover { border-color: #dc2626; color: #dc2626; }
+/* FOOTER */
+footer{background:var(--dark);padding:2.5rem 1.5rem 1.5rem}
+.fi{max-width:1100px;margin:0 auto}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:1.5rem}
+.ft{font-size:12px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.85rem}
+.fl{display:block;font-size:12.5px;color:rgba(255,255,255,0.5);margin-bottom:.45rem;cursor:pointer;transition:color .2s}
+.fl:hover{color:var(--gold2)}
+.fb{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:11.5px;color:rgba(255,255,255,0.35)}
 
-  /* FEE */
-  .fee-summary {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .fee-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 1.25rem;
-    text-align: center;
-  }
-  .fee-amount {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  .fee-label { font-size: 12px; color: var(--gray); }
-  .fee-green { color: var(--green); }
-  .fee-gold { color: var(--gold); }
-  .fee-red { color: #dc2626; }
+/* APP PAGES */
+.app-hdr{background:var(--forest);padding:2.25rem 1.5rem 1.75rem}
+.app-hi{max-width:900px;margin:0 auto}
+.app-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;color:#fff;margin-bottom:.2rem}
+.app-hdr p{font-size:13.5px;color:rgba(255,255,255,0.55)}
+.app-body{max-width:900px;margin:0 auto;padding:1.75rem 1.5rem}
+.fcard{background:var(--white);border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,0.07);padding:1.75rem}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fmg{margin-bottom:.9rem}
+.fml{display:block;font-size:12.5px;font-weight:500;color:var(--text);margin-bottom:5px}
+.fmi,.fms,.fmt{width:100%;padding:10px 13px;border:1.5px solid var(--lgray);border-radius:9px;font-family:'Outfit',sans-serif;font-size:13.5px;color:var(--text);background:var(--white);outline:none;transition:border-color .2s,box-shadow .2s}
+.fmi:focus,.fms:focus,.fmt:focus{border-color:var(--green2);box-shadow:0 0 0 3px rgba(45,140,78,0.09)}
+.fmt{resize:vertical;min-height:75px}
+.bsub{width:100%;padding:12px;background:var(--green);color:#fff;border:none;border-radius:9px;font-family:'Outfit',sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:.4rem}
+.bsub:hover{background:var(--green2);transform:translateY(-1px)}
 
-  /* ATTENDANCE */
-  .att-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
-    margin-bottom: 1rem;
-  }
-  .att-day {
-    aspect-ratio: 1;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .att-day.present { background: var(--green-pale); color: var(--green); }
-  .att-day.absent { background: #fee2e2; color: #dc2626; }
-  .att-day.today { background: var(--green); color: var(--white); }
-  .att-day.empty { background: transparent; color: var(--gray); opacity: 0.3; cursor: default; }
-  .att-day:not(.empty):hover { opacity: 0.8; transform: scale(1.05); }
+.scard{background:var(--white);border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,0.07);overflow:hidden}
+.stb{padding:1.1rem 1.5rem;border-bottom:1px solid var(--lgray);display:flex;gap:.85rem;align-items:center}
+.sw{flex:1;position:relative}
+.sico{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--gray);font-size:13px}
+.sinp{width:100%;padding:8px 13px 8px 34px;border:1.5px solid var(--lgray);border-radius:9px;font-family:'Outfit',sans-serif;font-size:13.5px;outline:none;transition:border-color .2s}
+.sinp:focus{border-color:var(--green2)}
+.stu-it{display:flex;align-items:center;gap:11px;padding:13px 1.5rem;border-bottom:1px solid #f5faf6;transition:background .15s}
+.stu-it:hover{background:#f6fdf7}
+.stu-it:last-child{border-bottom:none}
+.sav{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;flex-shrink:0}
+.snm{font-weight:500;font-size:13.5px;color:var(--dark);margin-bottom:1px}
+.smt{font-size:11.5px;color:var(--gray)}
+.sacs{margin-left:auto;display:flex;gap:5px;flex-shrink:0}
+.bsm{padding:4px 11px;border:1.5px solid var(--lgray);border-radius:7px;background:transparent;font-size:11.5px;cursor:pointer;color:var(--gray);font-family:'Outfit',sans-serif;transition:all .15s}
+.bsm:hover{border-color:var(--green2);color:var(--green2)}
+.bsm.del:hover{border-color:#dc2626;color:#dc2626}
+.empty-st{padding:2.5rem;text-align:center;color:var(--gray)}
 
-  .att-legend { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
-  .att-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gray); }
-  .att-dot {
-    width: 12px; height: 12px;
-    border-radius: 3px;
-  }
+.fee-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.fee-s{background:var(--white);border-radius:14px;box-shadow:0 2px 14px rgba(0,0,0,0.06);padding:1.25rem;text-align:center}
+.fee-n{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;margin-bottom:.2rem}
+.fee-l{font-size:11.5px;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:.4px}
+.fgr{color:var(--green)}.frd{color:#dc2626}.fgo{color:var(--gold)}
 
-  /* TOAST */
-  .toast {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--green);
-    color: var(--white);
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    z-index: 999;
-    white-space: nowrap;
-  }
-  .toast.show { transform: translateX(-50%) translateY(0); }
+.att-leg{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:.85rem}
+.al-i{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--gray)}
+.al-d{width:11px;height:11px;border-radius:3px}
+.att-hh{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:5px;text-align:center}
+.att-hd{font-size:10.5px;color:var(--gray);font-weight:500;padding:3px}
+.att-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.att-d{aspect-ratio:1;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:500;cursor:pointer;transition:all .15s;border:1.5px solid transparent}
+.att-d.p{background:var(--pale);color:var(--green);border-color:rgba(45,140,78,0.3)}
+.att-d.a{background:#fee2e2;color:#dc2626;border-color:rgba(220,38,38,0.3)}
+.att-d.t{background:var(--green);color:#fff}
+.att-d.e{cursor:default;opacity:0}
+.att-d:not(.e):hover{transform:scale(1.08)}
+.att-sts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem;margin-top:1rem}
+.att-st{background:var(--lgray);border-radius:10px;padding:.85rem;text-align:center}
+.att-sn{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700}
+.att-sl{font-size:11px;color:var(--gray);font-weight:500}
 
-  /* INFO ITEMS */
-  .info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #f3f4f6;
-    font-size: 14px;
-  }
-  .info-row:last-child { border-bottom: none; }
-  .info-row-label { color: var(--gray); }
-  .info-row-value { font-weight: 500; color: var(--dark); }
-
-  .map-link {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background: var(--green-pale);
-    color: var(--green);
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 1rem;
-  }
-
-  /* MOBILE HAMBURGER */
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-  .hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; display: block; }
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 64px; left: 0; right: 0;
-    background: var(--green);
-    z-index: 99;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-tab {
-    padding: 10px 16px;
-    border: none;
-    background: transparent;
-    color: rgba(255,255,255,0.8);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    text-align: left;
-    transition: all 0.2s;
-  }
-  .mobile-tab.active, .mobile-tab:hover {
-    background: rgba(255,255,255,0.12);
-    color: white;
-  }
-  .mobile-tab.active { background: var(--gold); color: var(--green); font-weight: 600; }
-
-  @media (max-width: 640px) {
-    .nav-tabs { display: none; }
-    .hamburger { display: flex; }
-    .grid-2 { grid-template-columns: 1fr; }
-    .grid-3 { grid-template-columns: 1fr; }
-    .fee-summary { grid-template-columns: 1fr; }
-    .hero { padding: 2rem 1rem 2.5rem; }
-    .hero-stats { gap: 1.5rem; }
-  }
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#fff;padding:10px 26px;border-radius:30px;font-size:13.5px;font-weight:500;box-shadow:0 8px 24px rgba(0,0,0,0.2);transition:transform .3s ease;z-index:9999;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+  .nb-links,.nb-enroll{display:none}.hamburger{display:flex}
+  .coaches-g,.rat-g,.bat-g,.rev-g,.why-g,.fg{grid-template-columns:1fr}
+  .fg2,.fee-g,.att-sts{grid-template-columns:1fr}
+  .stb{flex-direction:column;align-items:stretch}
+  .strip{gap:1rem}
+  .hero h1{font-size:2.6rem}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">
-    <div class="nav-logo">GD</div>
-    <div>
-      <div class="nav-title">GDCA</div>
-      <div class="nav-sub">Cricket Academy, Panchkula</div>
-    </div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nb-brand" onclick="showPage('home')">
+    <div class="nb-logo">GD</div>
+    <div><div class="nb-name">GDCA</div><div class="nb-sub">Cricket Academy · Panchkula</div></div>
   </div>
-  <div class="nav-tabs">
-    <button class="nav-tab active" onclick="showPage('home')">Home</button>
-    <button class="nav-tab" onclick="showPage('enroll')">Enroll</button>
-    <button class="nav-tab" onclick="showPage('students')">Students</button>
-    <button class="nav-tab" onclick="showPage('attendance')">Attendance</button>
-    <button class="nav-tab" onclick="showPage('fees')">Fees</button>
+  <div class="nb-links">
+    <button class="nb-link active" onclick="showPage('home')">Home</button>
+    <button class="nb-link" onclick="goSec('coaches-sec')">Coaches</button>
+    <button class="nb-link" onclick="goSec('batches-sec')">Batches</button>
+    <button class="nb-link" onclick="goSec('reviews-sec')">Reviews</button>
+    <button class="nb-link" onclick="showPage('students')">Students</button>
+    <button class="nb-link" onclick="showPage('attendance')">Attendance</button>
+    <button class="nb-link" onclick="showPage('fees')">Fees</button>
+    <button class="nb-enroll" onclick="showPage('enroll')">Enroll Now</button>
   </div>
-  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-tab active" onclick="showPage('home');toggleMenu()">🏠 Home</button>
-  <button class="mobile-tab" onclick="showPage('enroll');toggleMenu()">📋 Enroll</button>
-  <button class="mobile-tab" onclick="showPage('students');toggleMenu()">👥 Students</button>
-  <button class="mobile-tab" onclick="showPage('attendance');toggleMenu()">✅ Attendance</button>
-  <button class="mobile-tab" onclick="showPage('fees');toggleMenu()">💰 Fees</button>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-link active" onclick="showPage('home');toggleMenu()">🏠 Home</button>
+  <button class="mob-link" onclick="showPage('enroll');toggleMenu()">📋 Enroll</button>
+  <button class="mob-link" onclick="showPage('students');toggleMenu()">👥 Students</button>
+  <button class="mob-link" onclick="showPage('attendance');toggleMenu()">✅ Attendance</button>
+  <button class="mob-link" onclick="showPage('fees');toggleMenu()">💰 Fees</button>
 </div>
 
-<!-- HOME PAGE -->
+<!-- ═══════ HOME ═══════ -->
 <div class="page active" id="page-home">
-  <div class="hero">
-    <div class="hero-badge">Est. 2024 · Sector 9, Panchkula</div>
-    <h1>Gurjeet Daliwal<br>Cricket Academy</h1>
-    <p class="hero-tagline">Nurturing Champions of Tomorrow</p>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-pat"></div>
+  <div class="hero-c">
+    <div class="hero-chip">🏏 Sector 9, Panchkula &nbsp;·&nbsp; Est. 2024</div>
+    <h1>Gurjeet Daliwal<br><span>Cricket Academy</span></h1>
+    <p class="hero-sub">Where Champions Are Forged — Professional coaching, structured training &amp; a legacy of excellence in the heart of Panchkula.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="showPage('enroll')">Enroll Your Child Today</button>
+      <button class="btn-o" onclick="goSec('coaches-sec')">Meet the Coaches</button>
+    </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num" id="stat-students">0</span>
-        <span class="hero-stat-label">Students</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Batches</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">2</span>
-        <span class="hero-stat-label">Coaches</span>
-      </div>
+      <div class="hst"><span class="hst-n" id="stat-s">12</span><span class="hst-l">Students</span></div>
+      <div class="hst"><span class="hst-n">3</span><span class="hst-l">Batches</span></div>
+      <div class="hst"><span class="hst-n">15+</span><span class="hst-l">Yrs Exp</span></div>
+      <div class="hst"><span class="hst-n">4.9★</span><span class="hst-l">Parent Rating</span></div>
     </div>
   </div>
+</section>
 
-  <div class="section">
-    <div class="section-title">Our Coaches</div>
-    <div class="section-subtitle">Experienced professionals guiding your cricket journey</div>
-    <div class="grid-2">
-      <div class="coach-card">
-        <div class="coach-avatar head">GD</div>
-        <div class="coach-name">Gurjeet Daliwal</div>
-        <span class="coach-role head">Head Coach</span>
-        <div class="coach-info">Expert in batting techniques and game strategy. Leading GDCA to shape future cricket stars.</div>
-      </div>
-      <div class="coach-card">
-        <div class="coach-avatar asst">RY</div>
-        <div class="coach-name">Rajiv Yadav</div>
-        <span class="coach-role asst">Assistant Coach</span>
-        <div class="coach-info">Specialist in bowling and fielding drills. Brings professional tournament experience.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <div class="section-title">Training Batches</div>
-    <div class="section-subtitle">Choose your preferred timing</div>
-    <div style="display:flex; flex-direction:column; gap:1rem;">
-      <div class="batch-card">
-        <div class="batch-name">Morning Batch</div>
-        <div class="batch-time">6:00 AM – 8:30 AM &nbsp;·&nbsp; Mon–Sat</div>
-        <span class="badge badge-green">Open</span>
-      </div>
-      <div class="batch-card" style="border-left-color: var(--gold);">
-        <div class="batch-name">Evening Batch</div>
-        <div class="batch-time">4:00 PM – 6:30 PM &nbsp;·&nbsp; Mon–Sat</div>
-        <span class="badge badge-green">Open</span>
-      </div>
-      <div class="batch-card" style="border-left-color: #9ca3af;">
-        <div class="batch-name">Weekend Batch</div>
-        <div class="batch-time">7:00 AM – 11:00 AM &nbsp;·&nbsp; Sat–Sun</div>
-        <span class="badge badge-gold">Limited Seats</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <div class="section-title">Academy Info</div>
-    <div class="card card-pad">
-      <div class="info-row">
-        <span class="info-row-label">Academy Name</span>
-        <span class="info-row-value">GDCA</span>
-      </div>
-      <div class="info-row">
-        <span class="info-row-label">Location</span>
-        <span class="info-row-value">Sector 9, Panchkula</span>
-      </div>
-      <div class="info-row">
-        <span class="info-row-label">Head Coach</span>
-        <span class="info-row-value">Gurjeet Daliwal</span>
-      </div>
-      <div class="info-row">
-        <span class="info-row-label">Asst. Coach</span>
-        <span class="info-row-value">Rajiv Yadav</span>
-      </div>
-      <div class="info-row">
-        <span class="info-row-label">Contact</span>
-        <span class="info-row-value" style="color:var(--green);">+91 98765 XXXXX</span>
-      </div>
-      <a class="map-link" href="https://maps.google.com/?q=Sector+9+Panchkula" target="_blank">📍 View on Google Maps</a>
-    </div>
-  </div>
+<div class="strip">
+  <div class="strip-i"><div class="s-dot"></div>Professional Coaching</div>
+  <div class="strip-i"><div class="s-dot"></div>All Age Groups Welcome</div>
+  <div class="strip-i"><div class="s-dot"></div>Modern Training Methods</div>
+  <div class="strip-i"><div class="s-dot"></div>Individual Attention</div>
+  <div class="strip-i"><div class="s-dot"></div>Tournament Exposure</div>
 </div>
 
-<!-- ENROLL PAGE -->
+<!-- COACHES with PHOTOS -->
+<section class="sec" id="coaches-sec">
+  <div class="si">
+    <div class="sh">
+      <div class="sl">Our Coaching Staff</div>
+      <h2 class="st">Expert Coaches,<br>Proven Results</h2>
+      <p class="sd">Our coaching team brings decades of playing and coaching experience to guide every student to their true potential.</p>
+    </div>
+    <div class="coaches-g">
+
+      <!-- GURJEET DALIWAL -->
+      <div class="cc">
+        <div class="cc-photo gd-bg">
+          <div class="cc-name-overlay">
+            <div class="cc-role-pill">Head Coach</div><br>
+            <div class="cc-name-big">Gurjeet Daliwal</div>
+          </div>
+          <!-- Coach Illustrated SVG Portrait -->
+          <div class="cc-svg-wrap">
+            <svg width="200" height="210" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+              <!-- Body / Jersey - Green GDCA -->
+              <rect x="45" y="120" width="110" height="90" rx="8" fill="#1a5c2e"/>
+              <!-- GDCA text on jersey -->
+              <text x="100" y="155" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#e8b84b" text-anchor="middle">GDCA</text>
+              <text x="100" y="170" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" text-anchor="middle">HEAD COACH</text>
+              <!-- Jersey collar -->
+              <polygon points="85,120 100,136 115,120" fill="#145028"/>
+              <!-- Shoulders stripe -->
+              <rect x="45" y="120" width="110" height="8" rx="3" fill="#c8922a" opacity="0.7"/>
+              <!-- Arms -->
+              <rect x="20" y="122" width="30" height="60" rx="10" fill="#1a5c2e"/>
+              <rect x="150" y="122" width="30" height="60" rx="10" fill="#1a5c2e"/>
+              <!-- Hands -->
+              <ellipse cx="35" cy="182" rx="14" ry="12" fill="#c8845a"/>
+              <ellipse cx="165" cy="182" rx="14" ry="12" fill="#c8845a"/>
+              <!-- Cricket bat in right hand -->
+              <rect x="170" y="145" width="7" height="55" rx="3" fill="#d4a060" transform="rotate(15,173,160)"/>
+              <rect x="168" y="145" width="11" height="20" rx="2" fill="#c8922a" transform="rotate(15,173,160)"/>
+              <!-- Neck -->
+              <rect x="88" y="100" width="24" height="24" rx="6" fill="#c8845a"/>
+              <!-- Head -->
+              <ellipse cx="100" cy="78" rx="34" ry="38" fill="#c8845a"/>
+              <!-- Hair - dark -->
+              <ellipse cx="100" cy="48" rx="34" ry="20" fill="#1a0a05"/>
+              <rect x="66" y="48" width="68" height="18" fill="#1a0a05"/>
+              <!-- Side hair -->
+              <ellipse cx="68" cy="68" rx="10" ry="22" fill="#1a0a05"/>
+              <ellipse cx="132" cy="68" rx="10" ry="22" fill="#1a0a05"/>
+              <!-- Eyes -->
+              <ellipse cx="87" cy="76" rx="6" ry="5.5" fill="#fff"/>
+              <ellipse cx="113" cy="76" rx="6" ry="5.5" fill="#fff"/>
+              <circle cx="88" cy="77" r="3.5" fill="#3d1a00"/>
+              <circle cx="114" cy="77" r="3.5" fill="#3d1a00"/>
+              <circle cx="89" cy="76" r="1.2" fill="#fff"/>
+              <circle cx="115" cy="76" r="1.2" fill="#fff"/>
+              <!-- Eyebrows -->
+              <path d="M81 69 Q87 66 93 69" stroke="#1a0a05" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M107 69 Q113 66 119 69" stroke="#1a0a05" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Nose -->
+              <path d="M97 80 Q100 88 103 80" stroke="#a0644a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <!-- Moustache -->
+              <path d="M88 90 Q100 96 112 90" stroke="#1a0a05" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <!-- Smile -->
+              <path d="M91 95 Q100 101 109 95" stroke="#8b4030" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Ears -->
+              <ellipse cx="66" cy="78" rx="7" ry="9" fill="#c8845a"/>
+              <ellipse cx="134" cy="78" rx="7" ry="9" fill="#c8845a"/>
+              <!-- Cap -->
+              <ellipse cx="100" cy="52" rx="36" ry="12" fill="#0d3b1e"/>
+              <rect x="64" y="44" width="72" height="14" rx="4" fill="#0d3b1e"/>
+              <rect x="64" y="44" width="72" height="6" rx="3" fill="#c8922a" opacity="0.5"/>
+              <!-- Cap brim -->
+              <ellipse cx="100" cy="58" rx="42" ry="7" fill="#0a2e14"/>
+              <ellipse cx="70" cy="60" rx="18" ry="5" fill="#0a2e14"/>
+            </svg>
+          </div>
+          <div class="cc-gold-band"></div>
+        </div>
+        <div class="cc-body">
+          <p class="cc-bio">A seasoned cricket professional with over 15 years of playing and coaching experience across Haryana. Gurjeet Sir is renowned for his expertise in batting technique, game strategy, and building mental toughness in young players. Dozens of his students have represented district and state-level teams.</p>
+          <div class="cc-sts">
+            <div class="cst"><span class="cst-n">15+</span><span class="cst-l">Yrs Exp</span></div>
+            <div class="cst"><span class="cst-n">200+</span><span class="cst-l">Students</span></div>
+            <div class="cst"><span class="cst-n">4.9</span><span class="cst-l">Rating</span></div>
+          </div>
+          <div class="cc-tags">
+            <span class="tag">Batting Technique</span><span class="tag">Game Strategy</span>
+            <span class="tag">Mental Coaching</span><span class="tag">Youth Development</span><span class="tag">Tournament Prep</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RAJIV YADAV -->
+      <div class="cc">
+        <div class="cc-photo ry-bg">
+          <div class="cc-name-overlay">
+            <div class="cc-role-pill" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3)">Assistant Coach</div><br>
+            <div class="cc-name-big">Rajiv Yadav</div>
+          </div>
+          <!-- Rajiv SVG Portrait -->
+          <div class="cc-svg-wrap">
+            <svg width="200" height="210" viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+              <!-- Body / Jersey - Dark Green -->
+              <rect x="45" y="118" width="110" height="92" rx="8" fill="#1e4d30"/>
+              <text x="100" y="154" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#e8b84b" text-anchor="middle">GDCA</text>
+              <text x="100" y="169" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" text-anchor="middle">ASST. COACH</text>
+              <polygon points="85,118 100,134 115,118" fill="#163d24"/>
+              <rect x="45" y="118" width="110" height="8" rx="3" fill="#fff" opacity="0.15"/>
+              <!-- Arms -->
+              <rect x="20" y="120" width="30" height="58" rx="10" fill="#1e4d30"/>
+              <rect x="150" y="120" width="30" height="58" rx="10" fill="#1e4d30"/>
+              <ellipse cx="35" cy="178" rx="14" ry="12" fill="#b5714a"/>
+              <ellipse cx="165" cy="178" rx="14" ry="12" fill="#b5714a"/>
+              <!-- Cricket ball in left hand -->
+              <circle cx="38" cy="175" r="11" fill="#c0392b"/>
+              <path d="M32 170 Q38 175 44 170" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <path d="M32 180 Q38 175 44 180" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <!-- Neck -->
+              <rect x="88" y="99" width="24" height="23" rx="6" fill="#b5714a"/>
+              <!-- Head - slightly lighter skin -->
+              <ellipse cx="100" cy="77" rx="33" ry="36" fill="#b5714a"/>
+              <!-- Hair - short black -->
+              <ellipse cx="100" cy="49" rx="33" ry="18" fill="#0f0805"/>
+              <rect x="67" y="49" width="66" height="16" fill="#0f0805"/>
+              <ellipse cx="69" cy="67" rx="9" ry="20" fill="#0f0805"/>
+              <ellipse cx="131" cy="67" rx="9" ry="20" fill="#0f0805"/>
+              <!-- Eyes -->
+              <ellipse cx="87" cy="75" rx="6" ry="5.5" fill="#fff"/>
+              <ellipse cx="113" cy="75" rx="6" ry="5.5" fill="#fff"/>
+              <circle cx="88" cy="76" r="3.5" fill="#2a0d00"/>
+              <circle cx="114" cy="76" r="3.5" fill="#2a0d00"/>
+              <circle cx="89" cy="75" r="1.2" fill="#fff"/>
+              <circle cx="115" cy="75" r="1.2" fill="#fff"/>
+              <!-- Eyebrows -->
+              <path d="M81 68 Q87 65 93 68" stroke="#0f0805" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M107 68 Q113 65 119 68" stroke="#0f0805" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Nose -->
+              <path d="M97 79 Q100 87 103 79" stroke="#8b5030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <!-- Clean shave - slight smile -->
+              <path d="M91 93 Q100 100 109 93" stroke="#7a3520" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Ears -->
+              <ellipse cx="67" cy="77" rx="7" ry="9" fill="#b5714a"/>
+              <ellipse cx="133" cy="77" rx="7" ry="9" fill="#b5714a"/>
+              <!-- Cap - white/cream -->
+              <ellipse cx="100" cy="52" rx="35" ry="11" fill="#e8e0d0"/>
+              <rect x="65" y="44" width="70" height="14" rx="4" fill="#e8e0d0"/>
+              <rect x="65" y="44" width="70" height="5" rx="2" fill="#c8922a" opacity="0.4"/>
+              <!-- Cap brim -->
+              <ellipse cx="100" cy="57" rx="41" ry="6" fill="#d4c8b0"/>
+              <ellipse cx="72" cy="59" rx="16" ry="5" fill="#c8b890"/>
+            </svg>
+          </div>
+          <div class="cc-gold-band"></div>
+        </div>
+        <div class="cc-body">
+          <p class="cc-bio">Rajiv Sir brings elite bowling and fielding expertise to GDCA. A former competitive cricketer, he has a sharp eye for technique and a talent for breaking down complex skills for young learners. His high-energy style keeps every session engaging, productive and fun. Students credit him for dramatic improvements in their game.</p>
+          <div class="cc-sts">
+            <div class="cst"><span class="cst-n">10+</span><span class="cst-l">Yrs Exp</span></div>
+            <div class="cst"><span class="cst-n">150+</span><span class="cst-l">Students</span></div>
+            <div class="cst"><span class="cst-n">4.8</span><span class="cst-l">Rating</span></div>
+          </div>
+          <div class="cc-tags">
+            <span class="tag">Pace Bowling</span><span class="tag">Spin Bowling</span>
+            <span class="tag">Fielding Drills</span><span class="tag">Fitness Training</span><span class="tag">Video Analysis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RATINGS -->
+<section class="sec rat-sec">
+  <div class="si">
+    <div class="sh">
+      <div class="sl">Coach Performance Ratings</div>
+      <h2 class="st">Rated by Parents &amp; Students</h2>
+      <p class="sd" style="color:rgba(255,255,255,0.55)">Honest ratings based on coaching quality, communication and measurable player progress — collected from enrolled families.</p>
+    </div>
+    <div class="rat-g">
+      <div class="rc">
+        <div class="rc-hd">
+          <div class="rc-av" style="background:var(--gold);color:var(--forest)">GD</div>
+          <div><div class="rc-nm">Gurjeet Daliwal</div><div class="rc-rl">Head Coach · 15+ Years</div></div>
+        </div>
+        <div class="rc-ov"><div class="rc-sc">4.9</div><div><div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div><div class="rc-out">out of 5.0</div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Technical Knowledge</span><span class="rb-v">5.0</span></div><div class="rb-tr"><div class="rb-f" style="width:100%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Player Development</span><span class="rb-v">4.9</span></div><div class="rb-tr"><div class="rb-f" style="width:98%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Communication with Parents</span><span class="rb-v">4.8</span></div><div class="rb-tr"><div class="rb-f" style="width:96%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Patience &amp; Guidance</span><span class="rb-v">5.0</span></div><div class="rb-tr"><div class="rb-f" style="width:100%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Punctuality &amp; Discipline</span><span class="rb-v">4.9</span></div><div class="rb-tr"><div class="rb-f" style="width:98%"></div></div></div>
+      </div>
+      <div class="rc">
+        <div class="rc-hd">
+          <div class="rc-av" style="background:rgba(255,255,255,0.12);color:#fff">RY</div>
+          <div><div class="rc-nm">Rajiv Yadav</div><div class="rc-rl">Assistant Coach · 10+ Years</div></div>
+        </div>
+        <div class="rc-ov"><div class="rc-sc">4.8</div><div><div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star h"></div></div><div class="rc-out">out of 5.0</div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Bowling Expertise</span><span class="rb-v">5.0</span></div><div class="rb-tr"><div class="rb-f" style="width:100%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Fielding Drills Quality</span><span class="rb-v">4.9</span></div><div class="rb-tr"><div class="rb-f" style="width:98%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Student Motivation</span><span class="rb-v">4.8</span></div><div class="rb-tr"><div class="rb-f" style="width:96%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Fitness &amp; Conditioning</span><span class="rb-v">4.7</span></div><div class="rb-tr"><div class="rb-f" style="width:94%"></div></div></div>
+        <div class="rb"><div class="rb-tp"><span class="rb-l">Session Energy</span><span class="rb-v">5.0</span></div><div class="rb-tr"><div class="rb-f" style="width:100%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BATCHES -->
+<section class="sec" id="batches-sec">
+  <div class="si">
+    <div class="sh"><div class="sl">Training Schedule</div><h2 class="st">Choose Your Batch</h2><p class="sd">Flexible timings for school students and working youth. All sessions at our Sector 9, Panchkula ground.</p></div>
+    <div class="bat-g">
+      <div class="bc"><span class="bc-bg bbo">Open</span><div class="bc-icon">🌅</div><div class="bc-nm">Morning Batch</div><div class="bc-tm">6:00 AM – 8:30 AM</div><div class="bc-dy">Monday to Saturday</div><div class="bc-fe">₹2,000 <span>/ month</span></div></div>
+      <div class="bc feat"><span class="bc-bg bbl">Most Popular</span><div class="bc-icon">🌆</div><div class="bc-nm">Evening Batch</div><div class="bc-tm">4:00 PM – 6:30 PM</div><div class="bc-dy">Monday to Saturday</div><div class="bc-fe">₹2,000 <span>/ month</span></div></div>
+      <div class="bc"><span class="bc-bg bbl">Limited Seats</span><div class="bc-icon">🏆</div><div class="bc-nm">Weekend Batch</div><div class="bc-tm">7:00 AM – 11:00 AM</div><div class="bc-dy">Saturday &amp; Sunday</div><div class="bc-fe">₹1,500 <span>/ month</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec" style="background:var(--pale);padding-top:3.5rem;padding-bottom:3.5rem">
+  <div class="si">
+    <div class="sh" style="text-align:center"><div class="sl" style="text-align:center">Why GDCA</div><h2 class="st" style="text-align:center">What Makes Us Different</h2></div>
+    <div class="why-g">
+      <div class="wc"><div class="wc-i">🎯</div><div class="wc-t">Individual Focus</div><div class="wc-d">Personal attention to identify and fix weaknesses specific to each player's style.</div></div>
+      <div class="wc"><div class="wc-i">📊</div><div class="wc-t">Progress Tracking</div><div class="wc-d">Regular assessments and parent updates so you always know your child's progress.</div></div>
+      <div class="wc"><div class="wc-i">🏅</div><div class="wc-t">Tournament Play</div><div class="wc-d">Inter-academy and district tournaments to give students real match experience.</div></div>
+      <div class="wc"><div class="wc-i">💪</div><div class="wc-t">Physical Fitness</div><div class="wc-d">Dedicated fitness and agility drills alongside technical cricket training every session.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS with PHOTO AVATARS -->
+<section class="sec rev-sec" id="reviews-sec">
+  <div class="si">
+    <div class="sh"><div class="sl">Parent Reviews</div><h2 class="st">What Parents Are Saying</h2><p class="sd">Real feedback from families of our students about GDCA, our coaches and the impact on their children.</p></div>
+    <div class="rev-g">
+
+      <!-- Review 1 - Rajesh Sharma -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div></div>
+        <p class="rv-txt">My son Arjun has been training with Gurjeet Sir for 8 months and the transformation in his batting is remarkable. The detailed feedback after every session is what truly sets GDCA apart from every academy we tried before.</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#d4edda"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#8b5e3c"/>
+              <ellipse cx="22" cy="18" rx="8" ry="8" fill="#c08050"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#1a5c2e"/>
+              <ellipse cx="22" cy="10" rx="9" ry="5" fill="#1a0a05"/>
+              <ellipse cx="14" cy="16" rx="3" ry="7" fill="#1a0a05"/>
+              <ellipse cx="30" cy="16" rx="3" ry="7" fill="#1a0a05"/>
+              <circle cx="18" cy="17" r="2.5" fill="#fff"/><circle cx="18.8" cy="17.5" r="1.2" fill="#3d1a00"/>
+              <circle cx="26" cy="17" r="2.5" fill="#fff"/><circle cx="26.8" cy="17.5" r="1.2" fill="#3d1a00"/>
+              <path d="M18 23 Q22 26 26 23" stroke="#7a3020" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Rajesh Sharma</div>
+            <div class="rv-mt">Parent · Arjun, Age 13 · Morning Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 - Priya Kapoor -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div></div>
+        <p class="rv-txt">Rajiv Sir's bowling coaching is absolutely top-class. My daughter went from struggling with basics to taking wickets in school matches within just 3 months. The discipline and structured approach here is excellent.</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#fef3e7"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#c08050"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#e8772a"/>
+              <!-- Hair - longer for female -->
+              <ellipse cx="22" cy="10" rx="10" ry="6" fill="#2a1500"/>
+              <ellipse cx="12" cy="20" rx="4" ry="12" fill="#2a1500"/>
+              <ellipse cx="32" cy="20" rx="4" ry="12" fill="#2a1500"/>
+              <!-- Bindi -->
+              <circle cx="22" cy="12" r="1.5" fill="#c0392b"/>
+              <circle cx="17" cy="17" r="2.5" fill="#fff"/><circle cx="17.8" cy="17.5" r="1.2" fill="#5a1a00"/>
+              <circle cx="27" cy="17" r="2.5" fill="#fff"/><circle cx="27.8" cy="17.5" r="1.2" fill="#5a1a00"/>
+              <path d="M18 23 Q22 26 26 23" stroke="#8b3020" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Priya Kapoor</div>
+            <div class="rv-mt">Parent · Sneha, Age 11 · Evening Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 - Amarjeet Mehta -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star" style="background:linear-gradient(90deg,var(--gold2) 60%,var(--lgray) 60%)"></div></div>
+        <p class="rv-txt">What I appreciate most is how both coaches communicate with parents. We get regular updates on progress. The morning batch timing is perfect. Highly recommend GDCA to every cricket-loving family in Panchkula.</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#e8f0fe"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#a06030"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#1a3a8a"/>
+              <ellipse cx="22" cy="10" rx="8" ry="4" fill="#0f0805"/>
+              <ellipse cx="14" cy="16" rx="3" ry="7" fill="#0f0805"/>
+              <ellipse cx="30" cy="16" rx="3" ry="7" fill="#0f0805"/>
+              <!-- Turban hint -->
+              <ellipse cx="22" cy="9" rx="10" ry="6" fill="#1a3a8a" opacity="0.7"/>
+              <circle cx="17" cy="17" r="2.5" fill="#fff"/><circle cx="17.8" cy="17.5" r="1.2" fill="#2a0d00"/>
+              <circle cx="27" cy="17" r="2.5" fill="#fff"/><circle cx="27.8" cy="17.5" r="1.2" fill="#2a0d00"/>
+              <path d="M18 22 Q22 25 26 22" stroke="#602010" stroke-width="1.5" fill="none"/>
+              <!-- Beard hint -->
+              <path d="M15 22 Q22 30 29 22" stroke="#1a0a05" stroke-width="1.5" fill="rgba(10,5,0,0.3)"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Amarjeet Mehta</div>
+            <div class="rv-mt">Parent · Vikram, Age 15 · Morning Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 - Sunita Verma -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div></div>
+        <p class="rv-txt">Both coaches are incredibly dedicated. My son loves going to practice every single day — which was never the case before. The fees are very reasonable for the outstanding quality of professional coaching here.</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#fde8e8"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#c07050"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#c0392b"/>
+              <ellipse cx="22" cy="10" rx="10" ry="6" fill="#3d1500"/>
+              <ellipse cx="12" cy="20" rx="3.5" ry="10" fill="#3d1500"/>
+              <ellipse cx="32" cy="20" rx="3.5" ry="10" fill="#3d1500"/>
+              <circle cx="16" cy="12" r="2" fill="#c0392b"/>
+              <circle cx="17" cy="17" r="2.5" fill="#fff"/><circle cx="17.8" cy="17.5" r="1.2" fill="#3d0d00"/>
+              <circle cx="27" cy="17" r="2.5" fill="#fff"/><circle cx="27.8" cy="17.5" r="1.2" fill="#3d0d00"/>
+              <path d="M18 23 Q22 26 26 23" stroke="#8b2a20" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Sunita Verma</div>
+            <div class="rv-mt">Parent · Rohan, Age 10 · Evening Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 5 - Harpreet Gill -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div></div>
+        <p class="rv-txt">I enrolled both my sons in GDCA last year. The individual attention each student gets is truly impressive. Gurjeet Sir personally tracks every player. Both my boys got selected for their school team this year!</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#e8f5ed"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#b07040"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#1a5c2e"/>
+              <ellipse cx="22" cy="9" rx="10" ry="6" fill="#c8922a" opacity="0.9"/>
+              <rect x="12" y="9" width="20" height="8" rx="3" fill="#c8922a" opacity="0.8"/>
+              <ellipse cx="14" cy="17" rx="3" ry="7" fill="#1a0a05"/>
+              <ellipse cx="30" cy="17" rx="3" ry="7" fill="#1a0a05"/>
+              <circle cx="17" cy="17" r="2.5" fill="#fff"/><circle cx="17.8" cy="17.5" r="1.2" fill="#2a0800"/>
+              <circle cx="27" cy="17" r="2.5" fill="#fff"/><circle cx="27.8" cy="17.5" r="1.2" fill="#2a0800"/>
+              <path d="M18 23 Q22 26 26 23" stroke="#6a2a10" stroke-width="1.5" fill="none"/>
+              <path d="M16 22 Q22 28 28 22" stroke="#1a0a05" stroke-width="1.2" fill="rgba(10,5,0,0.2)"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Harpreet Gill</div>
+            <div class="rv-mt">Parent · Twin sons, Age 12 · Weekend Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 6 - Navdeep Kaushal -->
+      <div class="rv">
+        <div class="rv-stars"><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star"></div><div class="rv-star" style="background:linear-gradient(90deg,var(--gold2) 60%,var(--lgray) 60%)"></div></div>
+        <p class="rv-txt">The weekend batch is ideal for working parents. Rajiv Sir's fielding drills are fun and incredibly effective. My daughter's confidence has improved dramatically. A truly professional setup right here in Sector 9.</p>
+        <div class="rv-ft">
+          <div class="rv-av">
+            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" fill="#fef3e7"/>
+              <ellipse cx="22" cy="18" rx="8" ry="9" fill="#b06035"/>
+              <path d="M10 42 Q10 30 22 30 Q34 30 34 42" fill="#8a6a00"/>
+              <ellipse cx="22" cy="10" rx="8" ry="5" fill="#1a0a05"/>
+              <ellipse cx="14" cy="16" rx="3" ry="7" fill="#1a0a05"/>
+              <ellipse cx="30" cy="16" rx="3" ry="7" fill="#1a0a05"/>
+              <circle cx="17" cy="17" r="2.5" fill="#fff"/><circle cx="17.8" cy="17.5" r="1.2" fill="#2a0800"/>
+              <circle cx="27" cy="17" r="2.5" fill="#fff"/><circle cx="27.8" cy="17.5" r="1.2" fill="#2a0800"/>
+              <path d="M18 23 Q22 26 26 23" stroke="#7a3020" stroke-width="1.5" fill="none"/>
+              <!-- Moustache -->
+              <path d="M18 21 Q22 24 26 21" stroke="#1a0a05" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="rv-nm">Navdeep Kaushal</div>
+            <div class="rv-mt">Parent · Tanya, Age 14 · Weekend Batch</div>
+            <div class="rv-verified">✔ Verified Enrollee</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="sl" style="color:var(--gold2);text-align:center">Join GDCA Today</div>
+  <h2 class="st" style="color:#fff;text-align:center;max-width:560px;margin:.5rem auto">Ready to Start Your Cricket Journey?</h2>
+  <p style="color:rgba(255,255,255,0.6);font-size:15px;margin:1rem auto 2rem;max-width:460px;text-align:center">Seats are limited in each batch. Enroll your child today and give them the professional coaching they deserve.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <button class="btn-p" onclick="showPage('enroll')">Enroll Now — Free Registration</button>
+    <a href="https://maps.google.com/?q=Sector+9+Panchkula" target="_blank" style="text-decoration:none"><button class="btn-o">📍 Find Us on Maps</button></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="fg" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:1.5rem">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:21px;color:#fff;font-weight:700">GDCA</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:.65rem">Gurjeet Daliwal Cricket Academy</div>
+        <p style="font-size:12.5px;color:rgba(255,255,255,0.5);line-height:1.7">Nurturing cricket talent in Panchkula since 2024. Professional coaching, structured training and a genuine passion for the sport in every session.</p>
+      </div>
+      <div>
+        <div class="ft">Quick Links</div>
+        <span class="fl" onclick="goSec('coaches-sec')">Meet the Coaches</span>
+        <span class="fl" onclick="goSec('batches-sec')">Training Batches</span>
+        <span class="fl" onclick="goSec('reviews-sec')">Parent Reviews</span>
+        <span class="fl" onclick="showPage('enroll')">Enroll a Student</span>
+      </div>
+      <div>
+        <div class="ft">Contact</div>
+        <span class="fl">📍 Sector 9, Panchkula</span>
+        <span class="fl">🏏 Haryana, India — 134109</span>
+        <span class="fl">👨‍🏫 Head Coach: Gurjeet Daliwal</span>
+        <span class="fl">🕕 Mon–Sat · 6 AM &amp; 4 PM</span>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 GDCA – Gurjeet Daliwal Cricket Academy, Panchkula. All rights reserved.</span>
+      <span style="color:var(--gold2)">🏏 Where Champions Are Forged</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- ═══════ ENROLL ═══════ -->
 <div class="page" id="page-enroll">
-  <div class="section">
-    <div class="section-title">New Enrollment</div>
-    <div class="section-subtitle">Register a new student at GDCA</div>
-    <div class="card card-pad">
-      <div class="form-group">
-        <label class="form-label">Student Full Name *</label>
-        <input class="form-input" id="stu-name" type="text" placeholder="Enter full name">
+  <div class="app-hdr"><div class="app-hi"><h2>New Enrollment</h2><p>Register a new student at GDCA — Sector 9, Panchkula</p></div></div>
+  <div class="app-body">
+    <div class="fcard">
+      <div class="fmg"><label class="fml">Student Full Name *</label><input class="fmi" id="s-name" type="text" placeholder="Enter student's full name"></div>
+      <div class="fg2">
+        <div class="fmg"><label class="fml">Age</label><input class="fmi" id="s-age" type="number" placeholder="e.g. 13" min="5" max="35"></div>
+        <div class="fmg"><label class="fml">Gender</label><select class="fms" id="s-gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
       </div>
-      <div class="grid-2">
-        <div class="form-group">
-          <label class="form-label">Age</label>
-          <input class="form-input" id="stu-age" type="number" placeholder="e.g. 14" min="6" max="35">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Gender</label>
-          <select class="form-select" id="stu-gender">
-            <option value="">Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-          </select>
-        </div>
+      <div class="fg2">
+        <div class="fmg"><label class="fml">Parent / Guardian Name</label><input class="fmi" id="s-parent" type="text" placeholder="Parent name"></div>
+        <div class="fmg"><label class="fml">Phone Number *</label><input class="fmi" id="s-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
       </div>
-      <div class="form-group">
-        <label class="form-label">Parent / Guardian Name</label>
-        <input class="form-input" id="stu-parent" type="text" placeholder="Parent name">
+      <div class="fg2">
+        <div class="fmg"><label class="fml">Batch Preference</label><select class="fms" id="s-batch"><option value="">Select batch</option><option>Morning Batch (6–8:30 AM)</option><option>Evening Batch (4–6:30 PM)</option><option>Weekend Batch (Sat–Sun)</option></select></div>
+        <div class="fmg"><label class="fml">Playing Role</label><select class="fms" id="s-role"><option value="">Select role</option><option>Batsman</option><option>Bowler</option><option>All-rounder</option><option>Wicket-keeper</option></select></div>
       </div>
-      <div class="form-group">
-        <label class="form-label">Phone Number *</label>
-        <input class="form-input" id="stu-phone" type="tel" placeholder="+91 XXXXX XXXXX">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Batch Preference</label>
-        <select class="form-select" id="stu-batch">
-          <option value="">Select batch</option>
-          <option>Morning Batch (6–8:30 AM)</option>
-          <option>Evening Batch (4–6:30 PM)</option>
-          <option>Weekend Batch (Sat–Sun)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Playing Role</label>
-        <select class="form-select" id="stu-role">
-          <option value="">Select role</option>
-          <option>Batsman</option>
-          <option>Bowler</option>
-          <option>All-rounder</option>
-          <option>Wicket-keeper</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Monthly Fee (₹)</label>
-        <input class="form-input" id="stu-fee" type="number" placeholder="e.g. 2000" value="2000">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Additional Notes</label>
-        <textarea class="form-textarea" id="stu-notes" placeholder="Any medical conditions, experience, etc."></textarea>
-      </div>
-      <button class="btn" onclick="enrollStudent()">Enroll Student</button>
+      <div class="fmg"><label class="fml">Monthly Fee (₹)</label><input class="fmi" id="s-fee" type="number" value="2000"></div>
+      <div class="fmg"><label class="fml">Additional Notes</label><textarea class="fmt" id="s-notes" placeholder="Medical conditions, prior experience, etc."></textarea></div>
+      <button class="bsub" onclick="enrollStudent()">✅ Enroll Student</button>
     </div>
   </div>
 </div>
 
-<!-- STUDENTS PAGE -->
+<!-- ═══════ STUDENTS ═══════ -->
 <div class="page" id="page-students">
-  <div class="section">
-    <div class="section-title">All Students</div>
-    <div class="section-subtitle">Manage enrolled students</div>
-    <div class="card card-pad" style="margin-bottom:1rem;">
-      <input class="form-input" id="search-input" placeholder="Search by name..." oninput="filterStudents()" style="margin-bottom:0;">
-    </div>
-    <div class="card card-pad">
-      <div class="student-list" id="student-list">
-        <div style="text-align:center; padding:2rem; color:var(--gray); font-size:14px;">
-          No students enrolled yet. Use the <strong>Enroll</strong> tab to add students.
-        </div>
+  <div class="app-hdr"><div class="app-hi"><h2>All Students</h2><p>Manage enrolled students at GDCA</p></div></div>
+  <div class="app-body">
+    <div class="scard">
+      <div class="stb">
+        <div class="sw"><span class="sico">🔍</span><input class="sinp" id="search-inp" placeholder="Search by name..." oninput="filterStudents()"></div>
+        <button class="bsub" style="width:auto;padding:8px 18px;margin:0;font-size:13px" onclick="showPage('enroll')">+ Add Student</button>
       </div>
+      <div id="student-list"></div>
     </div>
   </div>
 </div>
 
-<!-- ATTENDANCE PAGE -->
+<!-- ═══════ ATTENDANCE ═══════ -->
 <div class="page" id="page-attendance">
-  <div class="section">
-    <div class="section-title">Attendance</div>
-    <div class="section-subtitle">Mark today's attendance</div>
-
-    <div class="card card-pad" style="margin-bottom:1rem;">
-      <label class="form-label">Select Student</label>
-      <select class="form-select" id="att-student">
-        <option value="">-- Select student --</option>
-      </select>
+  <div class="app-hdr"><div class="app-hi"><h2>Attendance</h2><p>Mark and track student attendance</p></div></div>
+  <div class="app-body">
+    <div class="fcard" style="margin-bottom:1.25rem">
+      <label class="fml">Select Student</label>
+      <select class="fms" id="att-sel" onchange="renderCal(this.value?parseInt(this.value):null)"><option value="">-- Select a student --</option></select>
     </div>
-
-    <div class="card card-pad" id="att-calendar-card" style="display:none;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-        <div style="font-weight:600; font-size:15px;" id="att-month-label">March 2026</div>
-        <div style="font-size:13px; color:var(--gray);">Click to toggle</div>
+    <div class="fcard" id="att-panel" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+        <div style="font-weight:600;font-size:15px" id="att-month"></div>
+        <div style="font-size:11.5px;color:var(--gray)">Tap a day to toggle</div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:4px; margin-bottom:0.75rem; text-align:center;">
-        <div style="font-size:11px;color:var(--gray);padding:4px;">S</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">M</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">T</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">W</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">T</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">F</div>
-        <div style="font-size:11px;color:var(--gray);padding:4px;">S</div>
+      <div class="att-leg">
+        <div class="al-i"><div class="al-d" style="background:var(--green)"></div>Today</div>
+        <div class="al-i"><div class="al-d" style="background:var(--pale);border:1px solid var(--green2)"></div>Present</div>
+        <div class="al-i"><div class="al-d" style="background:#fee2e2;border:1px solid #dc2626"></div>Absent</div>
       </div>
+      <div class="att-hh"><div class="att-hd">Sun</div><div class="att-hd">Mon</div><div class="att-hd">Tue</div><div class="att-hd">Wed</div><div class="att-hd">Thu</div><div class="att-hd">Fri</div><div class="att-hd">Sat</div></div>
       <div class="att-grid" id="att-grid"></div>
-      <div class="att-legend">
-        <div class="att-legend-item"><div class="att-dot" style="background:var(--green);"></div> Today</div>
-        <div class="att-legend-item"><div class="att-dot" style="background:var(--green-pale);border:1px solid var(--green);"></div> Present</div>
-        <div class="att-legend-item"><div class="att-dot" style="background:#fee2e2;border:1px solid #dc2626;"></div> Absent</div>
-      </div>
-      <div style="display:flex; gap:1rem; margin-top:1rem;">
-        <div class="card card-pad" style="flex:1; text-align:center; box-shadow:none; border:1px solid #e5e7eb;">
-          <div style="font-size:1.4rem; font-weight:700; color:var(--green);" id="att-present-count">0</div>
-          <div style="font-size:12px; color:var(--gray);">Present</div>
-        </div>
-        <div class="card card-pad" style="flex:1; text-align:center; box-shadow:none; border:1px solid #e5e7eb;">
-          <div style="font-size:1.4rem; font-weight:700; color:#dc2626;" id="att-absent-count">0</div>
-          <div style="font-size:12px; color:var(--gray);">Absent</div>
-        </div>
-        <div class="card card-pad" style="flex:1; text-align:center; box-shadow:none; border:1px solid #e5e7eb;">
-          <div style="font-size:1.4rem; font-weight:700; color:var(--gold);" id="att-pct">0%</div>
-          <div style="font-size:12px; color:var(--gray);">Rate</div>
-        </div>
+      <div class="att-sts">
+        <div class="att-st"><div class="att-sn" id="att-p" style="color:var(--green)">0</div><div class="att-sl">Present</div></div>
+        <div class="att-st"><div class="att-sn" id="att-a" style="color:#dc2626">0</div><div class="att-sl">Absent</div></div>
+        <div class="att-st"><div class="att-sn" id="att-pct" style="color:var(--gold)">0%</div><div class="att-sl">Rate</div></div>
       </div>
     </div>
-
-    <div class="card card-pad" id="att-empty" style="text-align:center; padding:2rem; color:var(--gray); font-size:14px;">
-      Select a student above to view and mark attendance.
+    <div class="fcard" id="att-empty" style="text-align:center;padding:2.5rem;color:var(--gray)">
+      <div style="font-size:2.2rem;margin-bottom:.6rem">📅</div>
+      <div style="font-weight:500;margin-bottom:.25rem">Select a student above</div>
+      <div style="font-size:12.5px">Their attendance calendar will appear here</div>
     </div>
   </div>
 </div>
 
-<!-- FEES PAGE -->
+<!-- ═══════ FEES ═══════ -->
 <div class="page" id="page-fees">
-  <div class="section">
-    <div class="section-title">Fee Management</div>
-    <div class="section-subtitle">Track payments and dues</div>
-
-    <div class="fee-summary">
-      <div class="fee-card">
-        <div class="fee-amount fee-green" id="fee-collected">₹0</div>
-        <div class="fee-label">Collected</div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-amount fee-red" id="fee-pending">₹0</div>
-        <div class="fee-label">Pending</div>
-      </div>
-      <div class="fee-card">
-        <div class="fee-amount fee-gold" id="fee-total">₹0</div>
-        <div class="fee-label">Total Billed</div>
-      </div>
+  <div class="app-hdr"><div class="app-hi"><h2>Fee Management</h2><p>Track monthly payments and dues</p></div></div>
+  <div class="app-body">
+    <div class="fee-g">
+      <div class="fee-s"><div class="fee-n fgr" id="f-col">₹0</div><div class="fee-l">Collected</div></div>
+      <div class="fee-s"><div class="fee-n frd" id="f-pen">₹0</div><div class="fee-l">Pending</div></div>
+      <div class="fee-s"><div class="fee-n fgo" id="f-tot">₹0</div><div class="fee-l">Total Billed</div></div>
     </div>
-
-    <div class="card card-pad">
-      <div id="fee-list" style="font-size:14px; color:var(--gray); text-align:center; padding:1rem;">
-        No students enrolled yet.
-      </div>
-    </div>
+    <div class="scard"><div id="fee-list"></div></div>
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
-let students = JSON.parse(localStorage.getItem('gdca_students') || '[]');
-let attendance = JSON.parse(localStorage.getItem('gdca_attendance') || '{}');
-let fees = JSON.parse(localStorage.getItem('gdca_fees') || '{}');
+// ── SAMPLE STUDENT DATA (pre-loaded) ──
+const SAMPLE = [
+  {id:1001,name:"Arjun Sharma",phone:"98765 43210",age:"13",gender:"Male",parent:"Rajesh Sharma",batch:"Morning Batch (6–8:30 AM)",role:"Batsman",fee:2000,notes:"Selected for school team",enrolled:"2026-01-10"},
+  {id:1002,name:"Sneha Kapoor",phone:"98765 43211",age:"11",gender:"Female",parent:"Priya Kapoor",batch:"Evening Batch (4–6:30 PM)",role:"Bowler",fee:2000,notes:"Fast learner, keen on pace bowling",enrolled:"2026-01-15"},
+  {id:1003,name:"Vikram Mehta",phone:"98765 43212",age:"15",gender:"Male",parent:"Amarjeet Mehta",batch:"Morning Batch (6–8:30 AM)",role:"All-rounder",fee:2000,notes:"District level aspirant",enrolled:"2026-01-20"},
+  {id:1004,name:"Rohan Verma",phone:"98765 43213",age:"10",gender:"Male",parent:"Sunita Verma",batch:"Evening Batch (4–6:30 PM)",role:"Wicket-keeper",fee:2000,notes:"",enrolled:"2026-02-01"},
+  {id:1005,name:"Simran Gill",phone:"98765 43214",age:"12",gender:"Female",parent:"Harpreet Gill",batch:"Weekend Batch (Sat–Sun)",role:"Batsman",fee:1500,notes:"Twin sister of Karan Gill",enrolled:"2026-02-01"},
+  {id:1006,name:"Karan Gill",phone:"98765 43214",age:"12",gender:"Male",parent:"Harpreet Gill",batch:"Weekend Batch (Sat–Sun)",role:"Bowler",fee:1500,notes:"Twin brother of Simran Gill",enrolled:"2026-02-01"},
+  {id:1007,name:"Tanya Kaushal",phone:"98765 43215",age:"14",gender:"Female",parent:"Navdeep Kaushal",batch:"Weekend Batch (Sat–Sun)",role:"All-rounder",fee:1500,notes:"Best fielder in batch",enrolled:"2026-02-10"},
+  {id:1008,name:"Manav Singh",phone:"98765 43216",age:"14",gender:"Male",parent:"Gurpreet Singh",batch:"Evening Batch (4–6:30 PM)",role:"Bowler",fee:2000,notes:"Spin bowling specialist",enrolled:"2026-02-14"},
+  {id:1009,name:"Preet Kaur",phone:"98765 43217",age:"13",gender:"Female",parent:"Jaswinder Kaur",batch:"Morning Batch (6–8:30 AM)",role:"Batsman",fee:2000,notes:"Strong cover drive",enrolled:"2026-02-20"},
+  {id:1010,name:"Rahul Bhatia",phone:"98765 43218",age:"16",gender:"Male",parent:"Suresh Bhatia",batch:"Morning Batch (6–8:30 AM)",role:"All-rounder",fee:2000,notes:"School captain candidate",enrolled:"2026-03-01"},
+  {id:1011,name:"Aditya Nair",phone:"98765 43219",age:"11",gender:"Male",parent:"Ramesh Nair",batch:"Evening Batch (4–6:30 PM)",role:"Batsman",fee:2000,notes:"Aggressive opening batsman style",enrolled:"2026-03-05"},
+  {id:1012,name:"Divya Sharma",phone:"98765 43220",age:"12",gender:"Female",parent:"Neha Sharma",batch:"Weekend Batch (Sat–Sun)",role:"Wicket-keeper",fee:1500,notes:"Excellent reflexes",enrolled:"2026-03-10"},
+];
+
+const SAMPLE_FEES = {1001:{paid:2000},1002:{paid:2000},1003:{paid:0},1004:{paid:2000},1005:{paid:1500},1006:{paid:0},1007:{paid:1500},1008:{paid:0},1009:{paid:2000},1010:{paid:2000},1011:{paid:0},1012:{paid:1500}};
+
+// Load from storage or use sample
+let students = JSON.parse(localStorage.getItem('gdca_s') || 'null');
+let fees = JSON.parse(localStorage.getItem('gdca_f') || 'null');
+let attendance = JSON.parse(localStorage.getItem('gdca_a') || '{}');
+
+if (!students) { students = SAMPLE; localStorage.setItem('gdca_s', JSON.stringify(students)); }
+if (!fees) { fees = SAMPLE_FEES; localStorage.setItem('gdca_f', JSON.stringify(fees)); }
 
 const today = new Date();
 const todayStr = today.toISOString().split('T')[0];
+const avC = ['#e8f5ed','#fef3e7','#e8f0fe','#fde8e8','#f0e8fe','#e0f4fd','#fdf0e8'];
+const avT = ['#1a5c2e','#8a6a00','#1a56c2','#9b1c1c','#5b21b6','#0a5a8a','#7a3a00'];
 
-function save() {
-  localStorage.setItem('gdca_students', JSON.stringify(students));
-  localStorage.setItem('gdca_attendance', JSON.stringify(attendance));
-  localStorage.setItem('gdca_fees', JSON.stringify(fees));
+function save(){localStorage.setItem('gdca_s',JSON.stringify(students));localStorage.setItem('gdca_a',JSON.stringify(attendance));localStorage.setItem('gdca_f',JSON.stringify(fees))}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+function initials(n){return n.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase()}
+function inr(n){return'₹'+Number(n).toLocaleString('en-IN')}
+
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelectorAll('.nb-link').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.mob-link').forEach(b=>b.classList.remove('active'));
+  const pages=['home','enroll','students','attendance','fees'];
+  document.querySelectorAll('.mob-link')[pages.indexOf(name)]?.classList.add('active');
+  window.scrollTo(0,0);
+  if(name==='students')renderStudents();
+  if(name==='attendance')renderAttSel();
+  if(name==='fees')renderFees();
+  updateStats();
 }
+function goSec(id){showPage('home');setTimeout(()=>{document.getElementById(id)?.scrollIntoView({behavior:'smooth'})},80)}
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function updateStats(){document.getElementById('stat-s').textContent=students.length}
 
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('page-' + name).classList.add('active');
-  const tabs = document.querySelectorAll('.nav-tab');
-  const pages = ['home','enroll','students','attendance','fees'];
-  tabs[pages.indexOf(name)]?.classList.add('active');
-  document.querySelectorAll('.mobile-tab').forEach((t,i) => t.classList.toggle('active', i === pages.indexOf(name)));
-
-  if (name === 'students') renderStudents();
-  if (name === 'attendance') renderAttSelect();
-  if (name === 'fees') renderFees();
+function enrollStudent(){
+  const name=document.getElementById('s-name').value.trim();
+  const phone=document.getElementById('s-phone').value.trim();
+  if(!name||!phone){toast('Please fill Name and Phone number');return;}
+  const s={id:Date.now(),name,phone,age:document.getElementById('s-age').value,gender:document.getElementById('s-gender').value,parent:document.getElementById('s-parent').value.trim(),batch:document.getElementById('s-batch').value,role:document.getElementById('s-role').value,fee:parseInt(document.getElementById('s-fee').value)||2000,notes:document.getElementById('s-notes').value.trim(),enrolled:todayStr};
+  students.push(s);fees[s.id]={paid:0};save();
+  toast('🎉 '+name+' enrolled at GDCA!');
+  ['s-name','s-age','s-parent','s-phone','s-notes'].forEach(id=>document.getElementById(id).value='');
+  ['s-gender','s-batch','s-role'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('s-fee').value='2000';
   updateStats();
 }
 
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-function initials(name) {
-  return name.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase();
-}
-
-function enrollStudent() {
-  const name = document.getElementById('stu-name').value.trim();
-  const phone = document.getElementById('stu-phone').value.trim();
-  if (!name || !phone) { showToast('Please fill Name and Phone'); return; }
-  const s = {
-    id: Date.now(),
-    name, phone,
-    age: document.getElementById('stu-age').value,
-    gender: document.getElementById('stu-gender').value,
-    parent: document.getElementById('stu-parent').value.trim(),
-    batch: document.getElementById('stu-batch').value,
-    role: document.getElementById('stu-role').value,
-    fee: parseInt(document.getElementById('stu-fee').value) || 2000,
-    notes: document.getElementById('stu-notes').value.trim(),
-    enrolled: todayStr
-  };
-  students.push(s);
-  fees[s.id] = { paid: 0 };
-  save();
-  showToast(name + ' enrolled successfully!');
-  ['stu-name','stu-age','stu-parent','stu-phone','stu-notes'].forEach(id => document.getElementById(id).value = '');
-  ['stu-gender','stu-batch','stu-role'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('stu-fee').value = '2000';
-  updateStats();
-}
-
-function renderStudents(filter) {
-  const list = document.getElementById('student-list');
-  let arr = students;
-  if (filter) arr = arr.filter(s => s.name.toLowerCase().includes(filter.toLowerCase()));
-  if (!arr.length) {
-    list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--gray);font-size:14px;">No students found. Use <strong>Enroll</strong> tab to add.</div>';
+function renderStudents(filter){
+  const list=document.getElementById('student-list');
+  let arr=filter?students.filter(s=>s.name.toLowerCase().includes(filter.toLowerCase())):students;
+  if(!arr.length){
+    list.innerHTML=`<div class="empty-st"><div style="font-size:2rem;margin-bottom:.6rem">👥</div><div style="font-weight:500;margin-bottom:.2rem">${filter?'No students match':'No students yet'}</div><div style="font-size:12px">${filter?'Try a different name':'Use Enroll tab to add students'}</div></div>`;
     return;
   }
-  list.innerHTML = arr.map(s => `
-    <div class="student-item">
-      <div class="student-avatar">${initials(s.name)}</div>
-      <div>
-        <div class="student-name">${s.name}</div>
-        <div class="student-meta">${s.batch || 'No batch'} · ${s.role || 'No role'} · ${s.phone}</div>
+  list.innerHTML=arr.map((s,i)=>`
+    <div class="stu-it">
+      <div class="sav" style="background:${avC[i%7]};color:${avT[i%7]}">${initials(s.name)}</div>
+      <div style="flex:1;min-width:0">
+        <div class="snm">${s.name}</div>
+        <div class="smt">${s.batch||'No batch'} · ${s.role||'No role'} · Age ${s.age||'?'} · ${s.phone}</div>
       </div>
-      <div class="student-actions">
-        <button class="btn-small" onclick="viewStudent(${s.id})">View</button>
-        <button class="btn-small danger" onclick="deleteStudent(${s.id})">Remove</button>
+      <div class="sacs">
+        <button class="bsm" onclick="viewStudent(${s.id})">View</button>
+        <button class="bsm del" onclick="deleteStudent(${s.id})">Remove</button>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
+}
+function filterStudents(){renderStudents(document.getElementById('search-inp').value)}
+function viewStudent(id){
+  const s=students.find(x=>x.id===id);if(!s)return;
+  alert(`GDCA — Student Details\n${'─'.repeat(28)}\nName: ${s.name}\nAge: ${s.age||'N/A'}  |  Gender: ${s.gender||'N/A'}\nParent: ${s.parent||'N/A'}\nPhone: ${s.phone}\nBatch: ${s.batch||'N/A'}\nRole: ${s.role||'N/A'}\nMonthly Fee: ₹${s.fee}\nEnrolled: ${s.enrolled}\nNotes: ${s.notes||'None'}`);
+}
+function deleteStudent(id){
+  if(!confirm('Remove this student from GDCA?'))return;
+  students=students.filter(s=>s.id!==id);delete fees[id];delete attendance[id];save();
+  renderStudents();updateStats();toast('Student removed');
 }
 
-function filterStudents() {
-  renderStudents(document.getElementById('search-input').value);
+function renderAttSel(){
+  const sel=document.getElementById('att-sel');
+  sel.innerHTML='<option value="">-- Select a student --</option>'+students.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
 }
-
-function viewStudent(id) {
-  const s = students.find(x => x.id === id);
-  if (!s) return;
-  alert(`Name: ${s.name}\nAge: ${s.age||'N/A'}\nParent: ${s.parent||'N/A'}\nPhone: ${s.phone}\nBatch: ${s.batch||'N/A'}\nRole: ${s.role||'N/A'}\nFee: ₹${s.fee}/month\nEnrolled: ${s.enrolled}\nNotes: ${s.notes||'None'}`);
-}
-
-function deleteStudent(id) {
-  if (!confirm('Remove this student?')) return;
-  students = students.filter(s => s.id !== id);
-  delete fees[id];
-  delete attendance[id];
-  save();
-  renderStudents();
-  updateStats();
-  showToast('Student removed');
-}
-
-function renderAttSelect() {
-  const sel = document.getElementById('att-student');
-  sel.innerHTML = '<option value="">-- Select student --</option>' +
-    students.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
-}
-
-function renderCalendar(studentId) {
-  const card = document.getElementById('att-calendar-card');
-  const empty = document.getElementById('att-empty');
-  if (!studentId) { card.style.display='none'; empty.style.display='block'; return; }
-  card.style.display='block'; empty.style.display='none';
-
-  const y = today.getFullYear(), m = today.getMonth();
-  const label = today.toLocaleString('default',{month:'long',year:'numeric'});
-  document.getElementById('att-month-label').textContent = label;
-
-  const firstDay = new Date(y,m,1).getDay();
-  const daysInMonth = new Date(y,m+1,0).getDate();
-  const att = attendance[studentId] || {};
-  const grid = document.getElementById('att-grid');
-  let html = '';
-  for (let i=0; i<firstDay; i++) html += '<div class="att-day empty"></div>';
-  for (let d=1; d<=daysInMonth; d++) {
-    const dateStr = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    let cls = '';
-    if (dateStr === todayStr) cls = 'today';
-    else if (att[dateStr] === 'P') cls = 'present';
-    else if (att[dateStr] === 'A') cls = 'absent';
-    else cls = '';
-    html += `<div class="att-day ${cls}" onclick="toggleAtt(${studentId},'${dateStr}')" title="${dateStr}">${d}</div>`;
+function renderCal(sid){
+  const panel=document.getElementById('att-panel');
+  const empty=document.getElementById('att-empty');
+  if(!sid){panel.style.display='none';empty.style.display='block';return;}
+  panel.style.display='block';empty.style.display='none';
+  const y=today.getFullYear(),m=today.getMonth();
+  document.getElementById('att-month').textContent=today.toLocaleString('default',{month:'long',year:'numeric'});
+  const fd=new Date(y,m,1).getDay(),dm=new Date(y,m+1,0).getDate();
+  const att=attendance[sid]||{};
+  let html='';
+  for(let i=0;i<fd;i++)html+='<div class="att-d e"></div>';
+  for(let d=1;d<=dm;d++){
+    const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const cls=ds===todayStr?'t':att[ds]==='P'?'p':att[ds]==='A'?'a':'';
+    html+=`<div class="att-d ${cls}" onclick="toggleAtt(${sid},'${ds}')">${d}</div>`;
   }
-  grid.innerHTML = html;
-  updateAttStats(studentId);
+  document.getElementById('att-grid').innerHTML=html;
+  updAtt(sid);
+}
+function toggleAtt(sid,ds){
+  if(!attendance[sid])attendance[sid]={};
+  const c=attendance[sid][ds];
+  if(!c)attendance[sid][ds]='P';else if(c==='P')attendance[sid][ds]='A';else delete attendance[sid][ds];
+  save();renderCal(sid);
+}
+function updAtt(sid){
+  const att=attendance[sid]||{};let p=0,a=0;
+  Object.values(att).forEach(v=>{if(v==='P')p++;else if(v==='A')a++;});
+  document.getElementById('att-p').textContent=p;
+  document.getElementById('att-a').textContent=a;
+  const t=p+a;document.getElementById('att-pct').textContent=t?Math.round(p/t*100)+'%':'0%';
 }
 
-function toggleAtt(studentId, dateStr) {
-  if (!attendance[studentId]) attendance[studentId] = {};
-  const cur = attendance[studentId][dateStr];
-  if (!cur) attendance[studentId][dateStr] = 'P';
-  else if (cur === 'P') attendance[studentId][dateStr] = 'A';
-  else delete attendance[studentId][dateStr];
-  save();
-  renderCalendar(studentId);
-}
-
-function updateAttStats(studentId) {
-  const att = attendance[studentId] || {};
-  let p=0, a=0;
-  Object.values(att).forEach(v => { if(v==='P') p++; else if(v==='A') a++; });
-  document.getElementById('att-present-count').textContent = p;
-  document.getElementById('att-absent-count').textContent = a;
-  const total = p+a;
-  document.getElementById('att-pct').textContent = total ? Math.round(p/total*100)+'%' : '0%';
-}
-
-document.getElementById('att-student').addEventListener('change', function() {
-  renderCalendar(this.value ? parseInt(this.value) : null);
-});
-
-function renderFees() {
-  const list = document.getElementById('fee-list');
-  if (!students.length) { list.innerHTML = '<div style="text-align:center;padding:1rem;color:var(--gray);">No students enrolled yet.</div>'; updateFeeSummary(); return; }
-  list.innerHTML = students.map(s => {
-    const f = fees[s.id] || { paid: 0 };
-    const pending = s.fee - f.paid;
-    const paidColor = f.paid >= s.fee ? 'var(--green)' : pending > 0 ? '#dc2626' : 'var(--gray)';
-    return `
-    <div class="student-item">
-      <div class="student-avatar">${initials(s.name)}</div>
-      <div style="flex:1;">
-        <div class="student-name">${s.name}</div>
-        <div class="student-meta">Due: ₹${s.fee}/mo · Paid: <span style="color:${paidColor};font-weight:500;">₹${f.paid}</span></div>
+function renderFees(){
+  const list=document.getElementById('fee-list');
+  if(!students.length){list.innerHTML='<div class="empty-st"><div style="font-size:2rem;margin-bottom:.6rem">💰</div><div style="font-weight:500">No students enrolled yet</div></div>';updFee();return;}
+  list.innerHTML=students.map((s,i)=>{
+    const f=fees[s.id]||{paid:0};const pen=s.fee-f.paid;
+    return`<div class="stu-it">
+      <div class="sav" style="background:${avC[i%7]};color:${avT[i%7]}">${initials(s.name)}</div>
+      <div style="flex:1;min-width:0">
+        <div class="snm">${s.name}</div>
+        <div class="smt">Due: ₹${s.fee}/mo · Paid: <span style="color:${f.paid>=s.fee?'var(--green)':'#dc2626'};font-weight:600">${inr(f.paid)}</span></div>
       </div>
-      <div>
-        ${pending > 0 ? `<div style="font-size:12px;color:#dc2626;font-weight:600;">₹${pending} due</div>` : '<div style="font-size:12px;color:var(--green);font-weight:600;">Paid ✓</div>'}
-        <button class="btn-small" onclick="markPaid(${s.id})" style="margin-top:4px;width:100%">Mark Paid</button>
+      <div style="text-align:right;flex-shrink:0">
+        ${pen>0?`<div style="font-size:11.5px;color:#dc2626;font-weight:600;margin-bottom:4px">${inr(pen)} due</div>`:`<div style="font-size:11.5px;color:var(--green);font-weight:600;margin-bottom:4px">Paid ✓</div>`}
+        <button class="bsm" onclick="markPaid(${s.id})" style="font-size:11px">Mark Paid</button>
       </div>
     </div>`;
   }).join('');
-  updateFeeSummary();
+  updFee();
 }
-
-function markPaid(id) {
-  const s = students.find(x => x.id === id);
-  if (!s) return;
-  fees[id] = { paid: s.fee };
-  save();
-  renderFees();
-  showToast('Fee marked as paid for ' + s.name);
+function markPaid(id){
+  const s=students.find(x=>x.id===id);if(!s)return;
+  fees[id]={paid:s.fee};save();renderFees();toast('✅ Fee paid — '+s.name);
 }
-
-function updateFeeSummary() {
-  let collected = 0, total = 0;
-  students.forEach(s => {
-    total += s.fee;
-    collected += (fees[s.id]?.paid || 0);
-  });
-  document.getElementById('fee-collected').textContent = '₹' + collected.toLocaleString('en-IN');
-  document.getElementById('fee-pending').textContent = '₹' + (total-collected).toLocaleString('en-IN');
-  document.getElementById('fee-total').textContent = '₹' + total.toLocaleString('en-IN');
+function updFee(){
+  let c=0,t=0;students.forEach(s=>{t+=s.fee;c+=(fees[s.id]?.paid||0);});
+  document.getElementById('f-col').textContent=inr(c);
+  document.getElementById('f-pen').textContent=inr(t-c);
+  document.getElementById('f-tot').textContent=inr(t);
 }
-
-function updateStats() {
-  document.getElementById('stat-students').textContent = students.length;
-}
-
 updateStats();
 </script>
 </body>
